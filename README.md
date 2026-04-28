@@ -3,7 +3,7 @@
 A standalone, clean-architecture **3D frontier detector** for ROS 2 jazzy.
 
 In autonomous exploration, a *frontier* is the boundary between known free
-space and unknown space — the place a robot should fly to next if it wants
+space and unknown space ; the place a robot should fly to next if it wants
 to learn the most new geometry per unit time. This package detects 3D
 frontiers in OctoMap-compatible voxel data, clusters them, ranks them by
 information gain, and publishes goal candidates a planner can consume.
