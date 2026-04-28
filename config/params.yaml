@@ -1,0 +1,26 @@
+/**:
+  ros__parameters:
+    use_sim_time: false
+
+frontier_detector_3d:
+  ros__parameters:
+    occupied_topic: "octomap_point_cloud_centers"
+    free_topic: "free_cells_centers"
+    frame_id: "map"
+    resolution: 0.2          # metres per voxel — match your octomap_server!
+    min_cluster_size: 5      # discard clusters smaller than this
+    detection_rate_hz: 2.0   # how often the detector runs
+    origin_x: 0.0
+    origin_y: 0.0
+    origin_z: 0.0
+
+synthetic_scene_publisher:
+  ros__parameters:
+    resolution: 0.2
+    room_size_x: 30
+    room_size_y: 30
+    room_size_z: 12
+    frame_id: "map"
+    publish_rate_hz: 2.0
+    expand_per_tick: 0.5     # 0.5 voxel/tick — slow growth for a clean demo
+    initial_radius: 4.0

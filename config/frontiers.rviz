@@ -1,0 +1,62 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Reference Frame: map
+      Cell Size: 1
+      Plane Cell Count: 30
+      Color: 160; 160; 160
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Occupied Cells
+      Enabled: true
+      Topic:
+        Value: /octomap_point_cloud_centers
+      Color: 200; 200; 200
+      Style: Boxes
+      Size (m): 0.18
+      Color Transformer: FlatColor
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Free Cells
+      Enabled: true
+      Topic:
+        Value: /free_cells_centers
+      Color: 60; 130; 255
+      Style: Boxes
+      Size (m): 0.06
+      Color Transformer: FlatColor
+      Alpha: 0.35
+    - Class: rviz_default_plugins/MarkerArray
+      Name: Frontier Clusters
+      Enabled: true
+      Namespaces:
+        frontiers: true
+      Topic:
+        Value: /frontiers/markers
+    - Class: rviz_default_plugins/PoseArray
+      Name: Frontier Goals
+      Enabled: true
+      Topic:
+        Value: /frontiers/goals
+      Color: 0; 255; 0
+      Arrow Length: 0.4
+  Global Options:
+    Background Color: 30; 30; 36
+    Fixed Frame: map
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 18
+      Focal Point:
+        X: 3
+        Y: 3
+        Z: 1
+      Pitch: 0.6
+      Yaw: 0.9
