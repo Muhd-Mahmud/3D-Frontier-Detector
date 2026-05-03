@@ -1,4 +1,4 @@
-# `frontier_detector_3d`
+# `3D_frontier_detector`
 
 A standalone, clean-architecture **3D frontier detector** for ROS 2 jazzy.
 
